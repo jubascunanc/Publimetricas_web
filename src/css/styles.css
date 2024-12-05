@@ -109,6 +109,202 @@ nav {
   padding: 10px;
 }
 
+
+/* Mejora del Logo */
+.navbar-logo {
+  max-width: 150px;
+  height: auto; /* Mantiene proporciones */
+  transition: transform 0.3s ease; /* Efecto suave */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Amplía ligeramente el logo al pasar el mouse */
+}
+
+/* Mejora del Botón */
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px; /* Bordes redondeados */
+  text-transform: uppercase;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos suaves */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-3px); /* Efecto de "elevación" */
+}
+
+.icon {
+  margin-left: 8px; /* Espacio entre texto e icono */
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los botones se ajusten si no caben */
+  gap: 10px; /* Espacio uniforme entre botones */
+  justify-content: flex-end; /* Botones alineados a la derecha */
+}
+
+/* Asegura que los botones estén alineados */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botón principal del dropdown */
+.dropdown .btn-outline-primary {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.dropdown .btn-outline-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7d); /* Oscurece al pasar el mouse */
+  transform: translateY(-3px); /* Eleva ligeramente */
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  background-color: #f8f9fa; /* Fondo claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border: none; /* Sin borde */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); /* Inicio animación hacia abajo */
+  opacity: 0; /* Inicio con opacidad 0 */
+}
+
+.dropdown-menu.show {
+  transform: translateY(0); /* En posición visible */
+  opacity: 1; /* Totalmente visible */
+}
+
+/* Elementos del menú */
+.dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e9ecef; /* Fondo más claro */
+  color: #007bff; /* Resalta el texto */
+}
+
+
+.navbar-logo {
+  max-width: 150px;
+  height: auto;
+  margin-right: 20px; /* Espaciado del logo respecto a los botones */
+}
+
+/* Botón de contacto */
+.btn-primary {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Botón de registro */
+.btn-outline-primary {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+
+form .btn-secondary {
+  display: inline-block; /* Asegura que esté en línea con los campos */
+  margin-top: 0; /* Elimina cualquier margen superior no deseado */
+  margin-left: 10px; /* Espacio entre el botón y el campo */
+  vertical-align: middle; /* Centra verticalmente con los campos */
+}
+
+/* Asegura que los botones estén alineados horizontalmente */
+.row .d-flex {
+  display: flex;
+  justify-content: space-between; /* Botones en extremos opuestos */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Botón de Login */
+.btn-outline-secondary {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid #6c757d; /* Gris oscuro */
+  background-color: transparent;
+  color: #6c757d;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+  .navbar .container {
+      flex-direction: column; /* Apila el logo y los botones */
+      text-align: center; /* Centra los elementos */
+  }
+
+  .navbar-logo {
+      margin: 0 auto 10px; /* Centra el logo con margen inferior */
+  }
+
+  .button-group {
+      justify-content: center; /* Botones centrados */
+      gap: 15px; /* Aumenta el espacio entre botones */
+  }
+}
+
+
+/* Ajustes para pantallas extra pequeñas */
+@media (max-width: 480px) {
+  .navbar-logo {
+      max-width: 100px; /* Logo más pequeño */
+  }
+
+  .btn {
+      font-size: 0.9rem; /* Texto más pequeño */
+      padding: 8px 15px; /* Reduce el relleno */
+  }
+}
+
+
 nav ul {
   list-style: none;
   display: flex;
@@ -10898,6 +11094,7 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -10931,7 +11128,6 @@ nav {
   transform: translateY(-2px);
   color: #007bff;
 }
-
 
 /* Responsivo básico */
 @media (max-width: 768px) {
@@ -11099,7 +11295,6 @@ body {
   transform: translateX(30px);
 }
 
-
 main {
   max-width: 1200px;
   margin: 20px auto;
@@ -11140,6 +11335,7 @@ main {
 .card-content.reverse {
   flex-direction: row-reverse;
 }
+
 
 /* Imágenes */
 .card-image {
@@ -11188,6 +11384,34 @@ main {
   transform: scale(1.05);
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+  color: white; /* Color del icono */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Más oscuro al pasar el mouse */
+  transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Tamaño del icono */
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+}
 
 /* Botones de llamada a la acción */
 .cta-button {
@@ -11313,7 +11537,7 @@ main {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background: url("/src/assets/img/digital-wave.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -11364,15 +11588,6 @@ main {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.testimonial-item {
-  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Sombra suave */
-  transition: background 0.3s, transform 0.3s;
-}
 
 /* Hover en las tarjetas */
 .testimonial-item:hover {

@@ -18,33 +18,44 @@
 
     <body>
 
-        <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <img src="./src/assets/img/Publi.png" width="180px" alt=""><a class="icon-button" href="./src/paginas/contacto.html">
-                    ¡Empieza a Crecer tu Marca Aquí! <span class="icon">🚀</span></a>
-                  
-                <a class="btn btn-primary" href="#signup"> Registrate</a>
+                <img src="./src/assets/img/Publi.png" class="navbar-logo" alt="Logo">
+                
+                <!-- Botón principal de CTA -->
+                <a id="contact-button" class="btn btn-primary" href="./src/paginas/contacto.html">
+                    ¡Empieza a Crecer tu Marca Aquí! <span class="icon">🚀</span>
+                </a>
+                
+                <!-- Menú de usuario -->
+                <div class="dropdown">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuario
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                        <li><a class="dropdown-item" href="./src/paginas/login.html">Regístrate</a></li>
+                        <li><a class="dropdown-item" href="./src/paginas/login.html">Login</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        
+        
 
     <!--Menú de navegación-->
     <nav>
+        <!-- Botón mejorado para alternar tema -->
+         <button id="theme-toggle" class="theme-toggle">
+            <span class="icon">🌙</span>
+         </button>    
+
         <ul class="nav-menu">
           <li><a href="/index.html">Inicio</a></li>
           <li><a href="./src/paginas/nosotros.html">Nosotros</a></li>
           <li><a href="./src/paginas/proyectos.html">Proyectos</a></li>
           <li><a href="./src/paginas/contacto.html">Contacto</a></li>
         </ul>
-      </nav>
-      
-       <!--Darkmode-->
-       <nav>
-        <!-- Botón mejorado para alternar tema -->
-        <button id="theme-toggle" class="theme-toggle">
-          <span class="icon">🌙</span>
-        </button>   
-      </nav>
+    </nav>
       
           
         <!-- Masthead-->
@@ -62,7 +73,7 @@
                                 <!-- Email address input-->
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Dirección Email" data-sb-validations="required,email" />
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Dirección de Email es requerida.</div>
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email"> Dirección de Email no es valido.</div>
                                     </div>
@@ -75,8 +86,7 @@
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
                                         <div class="fw-bolder">Envío de formulario Exitoso!</div>
-                                        <p>Para activar este formulario, registrate aquí!</p>
-                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms"></a>
+                                        <a class="text-white" href="./src/paginas/contacto.html"></a>
                                     </div>
                                 </div>
                                 <!-- Submit error message-->
@@ -150,7 +160,7 @@
                 </section>
             </article>
         </main>
-        
+
 
     <!--Menu de servicios digitales-->
         <section class="services-grid">
@@ -216,6 +226,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Call to Action-->
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
@@ -233,7 +244,7 @@
                             <!-- Email address input-->
                             <div class="row">
                                 <div class="col">
-                                    <input class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                    <input class="form-control form-control-lg" id="emailAddressBelow" type="email" placeholder="Dirección Email" data-sb-validations="required,email" />
                                     <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">Dirección de Email es requerida.</div>
                                     <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">Dirección de Email no valida.</div>
                                 </div>
@@ -246,8 +257,7 @@
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Formulario enviado!</div>
-                                    <p> Para activar este formulario, ingresa</p>
-                                    <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <a class="text-white" href="./src/paginas/login.html"></a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -260,6 +270,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
@@ -292,10 +304,21 @@
                 </div>
             </div>
         </footer>
+
+        <button id="backToTop" class="back-to-top" title="Ir al inicio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 4l-8 8h6v8h4v-8h6z"></path>
+            </svg>
+        </button>
+        
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./src/js/menu.js"></script>
+        <script src="./src/js/boton.js"></script>
+        <script src="./src/js/ancla.js"></script>
+        <script src="./src/js/contacto.js"></script>
         <script src="./src/js/darkmode.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
