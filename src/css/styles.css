@@ -241,6 +241,305 @@ nav {
   transform: translateY(-3px);
 }
 
+/* Contenedor principal */
+.bubble-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Estilo básico del título */
+.agency-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* Evitar saltos de línea durante la animación */
+  overflow: hidden; /* Ocultar texto antes de que se "escriba" */
+  border-right: 3px solid #6a5acd; /* Simular cursor */
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
+}
+
+/* Resaltar IA */
+.agency-title .highlight {
+  color: #6a5acd;
+  font-weight: bold;
+}
+
+/* Animaciones */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Mostrar todo el texto */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Alternar visibilidad del cursor */
+  }
+}
+
+/* Variables de color */
+:root {
+  --background-color: #ffffff; /* Fondo claro */
+  --text-color: #333; /* Texto oscuro */
+  --prompt-color: #00ff00; /* Verde para el símbolo */
+  --cursor-color: #6a5acd; /* Cursor púrpura */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra clara */
+}
+
+[data-theme="dark"] {
+  --background-color: #121212; /* Fondo oscuro */
+  --text-color: #f0f0f0; /* Texto claro */
+  --prompt-color: #00ff00; /* Verde brillante */
+  --cursor-color: #00ff00; /* Cursor verde para tema oscuro */
+  --shadow-color: rgba(255, 255, 255, 0.1); /* Sombra tenue */
+}
+
+/* Contenedor del prompt */
+.prompt-container {
+  display: flex;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  color: var(--text-color); /* Dinámico según el tema */
+  background: var(--background-color); /* Dinámico según el tema */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px var(--shadow-color); /* Sombra dinámica */
+  max-width: 600px;
+  margin: 0 auto 50px;
+  white-space: nowrap; /* Evitar saltos de línea */
+  overflow: hidden; /* Mantener apariencia limpia */
+  position: relative; /* Asegurar comportamiento dinámico */
+}
+
+/* Símbolo del prompt */
+.prompt-line {
+  color: var(--prompt-color); /* Dinámico según el tema */
+  margin-right: 10px;
+  flex-shrink: 0; /* Evita que el símbolo cambie de tamaño */
+}
+
+/* Texto del prompt */
+.agency-description {
+  display: inline-block;
+  border-right: 2px solid var(--cursor-color); /* Cursor dinámico */
+  animation: blink 0.8s step-end infinite;
+  white-space: pre-wrap; /* Permitir que el texto se ajuste dinámicamente */
+  overflow: visible; /* Asegurar que el texto sea visible */
+}
+
+/* Animación del cursor */
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--cursor-color);
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Contenedor de burbujas */
+.bubbles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Contenedor para los párrafos de descripción en burbujas */
+.bubble-description {
+  display: flex; /* Usar flex para garantizar alineación y control */
+  flex-direction: column; /* Asegurar que los párrafos estén en columna */
+  justify-content: center; /* Centrar el contenido verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  max-width: 220px; /* Controlar el ancho del texto */
+  margin: 10px auto; /* Centrando y espaciando adecuadamente */
+  text-align: justify; /* Justificar el texto para un aspecto profesional */
+  line-height: 1.4; /* Separación entre líneas */
+}
+
+/* Burbujas individuales */
+.bubble {
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(135deg, #6a5acd, #8a2be2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 4s ease-in-out infinite; /* Animación de flotación */
+}
+
+/* Animación de flotación */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Efecto Hover */
+.bubble:hover {
+  transform: translateY(-20px) scale(1.05); /* Sube un poco más y se agranda */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Imágenes dentro de las burbujas */
+.bubble img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Títulos de las burbujas */
+.bubble-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Descripción de las burbujas */
+.bubble-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+  .agency-title {
+    font-size: 1.8rem;
+  }
+
+  .agency-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .bubble {
+    width: 180px;
+    height: 180px;
+  }
+
+  .bubble img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .bubble-title {
+    font-size: 1.3rem;
+  }
+
+  .bubble-description {
+    font-size: 0.95rem;
+  }
+
+  .bubbles {
+    gap: 20px;
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+  .agency-title {
+    font-size: 1.5rem;
+  }
+
+  .agency-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .bubble {
+    width: 140px;
+    height: 140px;
+  }
+
+  .bubble img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bubble-title {
+    font-size: 1.1rem;
+  }
+
+  .bubble-description {
+    font-size: 0.85rem;
+  }
+
+  .bubbles {
+    gap: 15px;
+  }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+  .bubble-container {
+    padding: 10px;
+    height: auto; /* Permitir que el contenedor crezca dinámicamente */
+  }
+
+  .bubbles {
+    gap: 10px; /* Reducir espacio entre burbujas */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bubble-wrapper {
+    max-width: 160px; /* Reducir ancho máximo de las burbujas y texto */
+    margin-bottom: 20px; /* Separación extra para evitar cortes */
+  }
+
+  .bubble {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto; /* Asegurar centrado */
+  }
+
+  .bubble img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bubble-title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .bubble-description {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
 
 form .btn-secondary {
   display: inline-block; /* Asegura que esté en línea con los campos */

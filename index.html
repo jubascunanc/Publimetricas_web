@@ -12,8 +12,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./src/css/styles.css" rel="stylesheet" />
+
+        
     </head>
 
     <body>
@@ -22,11 +26,13 @@
             <div class="container">
                 <img src="./src/assets/img/Publi.png" class="navbar-logo" alt="Logo">
                 
-                <!-- Botón principal de CTA -->
-                <a id="contact-button" class="btn btn-primary" href="./src/paginas/contacto.html">
-                    ¡Empieza a Crecer tu Marca Aquí! <span class="icon">🚀</span>
-                </a>
-                
+            <!-- Botón de Bootstrap -->
+    <button id="contact-button" class="btn btn-primary">
+        ¡Empieza a Crecer tu Marca Aquí! <span class="icon">🚀</span>
+    </button>
+
+</body>
+</html>          
                 <!-- Menú de usuario -->
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
@@ -101,8 +107,49 @@
             </div>
         </header>
 
+<!--Burbujas de Texto-->
 
-        
+<div class="bubble-container">
+    <h5 class="agency-title">Somos una Agenc<span class="highlight">IA</span> por Inteligencia Artificial!</h5>
+
+    <div class="prompt-container">
+        <span class="prompt-line">$</span>
+        <p class="agency-description"></p>
+      </div>
+   
+<hr>
+      <div class="bubbles">
+        <div class="bubble-container">
+          <div class="bubble">
+            <img src="./src/assets/img/dalee-web-img.webp">
+          </div>
+          <h6 class="bubble-title">Estrategia</h6>
+          <p class="bubble-description">
+            Planificamos soluciones inteligentes para alcanzar tus objetivos de negocio.
+          </p>
+        </div>
+        <div class="bubble-container">
+          <div class="bubble">
+            <img src="./src/assets/img/Dalle-astronaut-ride-horse.webp">
+          </div>
+          <h6 class="bubble-title">Creatividad</h6>
+          <p class="bubble-description">
+            Diseñamos experiencias únicas que conectan con tu audiencia.
+          </p>
+        </div>
+        <div class="bubble-container">
+          <div class="bubble">
+            <img src="./src/assets/img/Dalle-chatbot-sales.webp">
+          </div>
+          <h6 class="bubble-title">Optimización</h6>
+          <p class="bubble-description">
+            Mejoramos procesos con herramientas avanzadas de inteligencia artificial.
+          </p>
+        </div>
+      </div>
+      
+    
+  <hr>
           <main>
             <article class="main-article">
                 <!-- Primera tarjeta -->
@@ -316,6 +363,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="./src/js/menu.js"></script>
+        <script src="./src/js/prompt.js"></script>
+        <script src="./src/js/call.js"></script>
         <script src="./src/js/boton.js"></script>
         <script src="./src/js/ancla.js"></script>
         <script src="./src/js/contacto.js"></script>
